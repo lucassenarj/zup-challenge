@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DribbbleProvider } from '../../providers/dribbble/dribbble';
+declare var jquery:any;
+declare var $ :any;
 
 @Component({
   selector: 'app-shots',
@@ -44,6 +46,12 @@ export class ShotsComponent implements OnInit {
     }, error=>{
       console.log(error);
     })
+  }
+
+  changeSize(){
+    $(".collums").attr('class', 'col-md-6');
+    $(".collums").attr('class', 'col-md-6');
+    //$('.collums').slideToggle(); //
   }
 
 }

@@ -22,8 +22,8 @@ export class DribbbleProvider {
   }
 
   likeShot(shotId){
-    return this.http.post(this.baseApiPath + `/shots/${shotId}/like?access_token=` + this.getApiKey(), { 
-      //headers: this.setHeaders() 
+    return this.http.post(this.baseApiPath + `/shots/${shotId}/like?access_token=` + this.getApiKey(), {
+    
     });
   }
 
