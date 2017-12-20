@@ -1,3 +1,53 @@
-<p>
-  shots works!
-</p>
+<div class="container">
+  <div class="row">
+    <div *ngFor="let shot of shots" class="col-xs-12 col-md-3">
+      <div class="thumbnail view overlay hm-white-strong">
+        <a title="{{ shot.title }}" title="{{ shot.title }}">
+          <img src="{{ shot.images.normal }}" alt="{{ shot.title }}">
+        </a>
+        <div class="caption image-counters pull-right">
+          <i class="fa fa-eye" aria-hidden="true"></i>
+          <span class="count">{{ shot.views_count }}</span>
+          
+          <i class="fa fa-thumbs-up" aria-hidden="true"></i> 
+          <span class="count">{{ shot.likes_count }}</span>
+  
+          <i class="fa fa-comments" aria-hidden="true"></i>
+          <span class="count">{{ shot.comments_count }}</span>
+        </div>
+        <div class="mask" style="padding-left:15px;">
+            <h3><a (click)="shotDetails(shot.id)" data-toggle="modal" data-target="#shotDetail">{{ shot.title }}</a></h3>
+            <p [innerHTML]="shot.description">
+        </div>
+      </div>
+      <p style="margin-top:-15px; margin-bottom:20px;"><a href="{{ shot.user.html_url }}" title="{{ shot.user.name }}" target="_blank"><img src="{{ shot.user.avatar_url }}" width="16" /> {{ shot.user.name }}</a></p>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="shotDetail" class="modal fade" id="shotDetail" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+  
+          <div class="row">
+            <div class="col-lg-6 col-md-6">
+                <img src="{{ shotDetail.images.normal }}">
+            </div>
+            
+            <div class="col-lg-6 col-md-6">
+              <h3>{{ shotDetail.title }}</h3>
+              <h5>Created by: <a href="{{ shotDetail.user.html_url }}" title="{{ shotDetail.user.name }}" target="_blank">{{ shotDetail.user.name }}</a></h5>
+              <p [innerHTML]="shotDetail.description"></p>
+              <a title="Views"><i class="fa fa-eye" aria-hidden="true"></i> <span class="badge hover">{{ shotDetail.views_count }}</span></a>
+              <a (click)="likeShot(shotDetail.id)" title="Likes"><i class="fa fa-thumbs-up" aria-hidden="true"></i> <span class="badge hover">{{ shotDetail.likes_count }}</span></a>
+              <a title="Comments"><i class="fa fa-comments" aria-hidden="true"></i> <span class="badge hover">{{ shotDetail.comments_count }}</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

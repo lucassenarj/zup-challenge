@@ -4,8 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http'; 
 import { HttpModule } from '@angular/http';
-
-
+import { RouterModule, Routes } from '@angular/router';
 
 import { DribbbleProvider } from '../providers/dribbble/dribbble';
 import { ShotsComponent } from './shots/shots.component';
@@ -20,6 +19,9 @@ import { ShotsComponent } from './shots/shots.component';
     BrowserModule,
     HttpClientModule,
     HttpModule
+  ],
+  exports: [
+    RouterModule
   ],
   providers: [
     DribbbleProvider
