@@ -1,27 +1,56 @@
-# ZupChallenge
+# English
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.1.
+## Zup Challenge
 
-## Development server
+### Configuring host
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+1 - Access `zup-challenge` folder by the terminal
 
-## Code scaffolding
+2 - Execute `npm install`
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+3 - Open `dribbble.ts` file in `src/providers/dribbble/` and past your Dribbble Api Key on the following function:
+```
+    getApiKey() :string{
+        return 'APIKey';
+    }
+```
 
-## Build
+4 - Execute `ng serve`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+5 - Access `http://localhost:4200/` to navegate on the App
 
-## Running unit tests
+### Informations
+This project use Angular 5.1.1 and was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.1. The project consume the [Dribbble API](http://dribbble.com/) to list some Shots and informations about then.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Documentations
+- [Angular](https://angular.io/docs)
+- [Angular CLI](https://github.com/angular/angular-cli)
+- [Dribbble API](http://developer.dribbble.com/v1/)
 
-## Running end-to-end tests
+# Português
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## Teste Zup IT
 
-## Further help
+### Configurando o servidor
+1 - Acesse a pasta `zup-challenge` pelo terminal
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+2 - Execute `npm install`
+
+3 - Abra o arquivo `dribbble.ts` em `src/providers/dribbble/` e cole sua ApiKey na seguinte função:
+```
+    getApiKey() :string{
+        return 'APIKey';
+    }
+```
+
+4 - Execute `ng serve`
+
+5 - Acesse `http://localhost:4200/` para navegar pela aplicação
+
+### Informações
+Esse projeto utilizou o Angular 5.1.1 e foi gerado pelo [Angular CLI](https://github.com/angular/angular-cli) versão 1.6.1. O projeto consome a [Dribbble API](http://dribbble.com/) para listar alguns Shots e as informações sobre eles.
+
+### Documentações
+- [Angular](https://angular.io/docs)
+- [Angular CLI](https://github.com/angular/angular-cli)
+- [Dribbble API](http://developer.dribbble.com/v1/)

@@ -28,7 +28,7 @@ export class DribbbleProvider {
   }
 
   getApiKey() :string{
-    return '';
+    return 'APIKey';
   }
 
 }
